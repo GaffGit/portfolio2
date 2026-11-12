@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thomas Rickström — Computer Science student</title>
+  <meta name="description" content="Thomas Rickström is an Information and Software Engineering student at the University of Jyväskylä who builds full-stack apps and practical tools. Projects, skills and contact.">
+  <link rel="canonical" href="https://portfolio-gaffgit.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thomas Rickström — Computer Science student">
+  <meta property="og:description" content="Software engineering student building full-stack apps with TypeScript, React and Python.">
+  <meta property="og:url" content="https://portfolio-gaffgit.vercel.app/">
+  <meta property="og:image" content="https://portfolio-gaffgit.vercel.app/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" type="text/markdown" href="/llms.txt" title="Plain-text summary for language models">
+  <meta name="theme-color" content="#0b0f0d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0f0d'/%3E%3Cpath d='M8 10l6 6-6 6' stroke='%234ade80' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16 22h8' stroke='%234ade80' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap">
+  <script>
+    // Apply the saved theme before first paint so there is no flash.
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    document.documentElement.classList.add('js');
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="ascii" aria-hidden="true">
+    <pre id="ascii"></pre>
+    <p class="ascii-readout" id="ascii-readout"></p>
+  </div>
+
+  <header class="titlebar">
+    <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="title">guest@gaffgit: <span id="cwd">~</span></p>
+    <nav aria-label="Sections">
+      <a href="#whoami">whoami</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO: who you are, in one screen, before any scrolling -->
+    <section id="whoami" class="section hero" data-path="~">
+      <p class="cmd" data-type>whoami</p>
+      <h1 class="name">Thomas Rickström<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="role">Information and Software Engineering student · full-stack and AI · Jyväskylä, Finland</p>
+      <p class="lede">Information and Software Engineering student at the University of Jyväskylä. I enjoy turning ideas into working software and exploring how AI can solve real-world problems.</p>
+      <ul class="links">
+        <li><button class="btn btn-primary" id="copy-email" data-email="thomas.rickstrom@live.com">copy email</button></li>
+        <li><a class="btn" href="resume.pdf">resume.pdf</a></li><!-- TODO: add resume.pdf next to index.html -->
+        <li><a class="btn" href="https://github.com/gaffgit" rel="me">github</a></li>
+        <li><a class="btn" href="https://www.linkedin.com/in/thomas-rickström-44719b3b7/" rel="me">linkedin</a></li>
+      </ul>
+      <p class="status"><span class="dot-live" aria-hidden="true"></span>Open to internships and summer positions in software development and AI.</p>
+      <p class="hint">Type <kbd>help</kbd> in the prompt below, or just scroll.</p>
+    </section>
+
+    <!-- PROJECTS: 3–5 of your best. Outcome first, real numbers, say what YOU did. -->
+    <section id="projects" class="section" data-path="~/projects">
+      <p class="cmd" data-type>ls -l ~/projects</p>
+      <h2 class="sr-only">Projects</h2>
+
+      <article class="project">
+        <header class="project-head">
+          <p class="perm" aria-hidden="true">drwxr-xr-x</p>
+          <h3>Drillhouse/</h3>
+          <p class="tag">side project · 2026</p>
+        </header>
+        <dl class="kv">
+          <dt>problem</dt><dd>Poker training tools that grade you against solver strategies (like GTO Wizard) are expensive. I wanted my own drill trainer for 6-max No-Limit Hold'em.</dd>
+          <dt>role</dt><dd>Solo: product design, architecture, poker engine, UI and the solver data pipeline.</dd>
+          <dt>outcome</dt><dd>A web app that deals spots and grades every answer against solver solutions by EV loss: <strong>35 preflop spots plus full hands played to the river.</strong> The poker engine is pure TypeScript: a 5–7 card hand evaluator, equity calculations, EV-based grading, and leak detection that groups your mistakes into patterns to replay. <strong>188 unit tests.</strong> Solutions are generated offline with open-source solvers in Docker.</dd>
+          <dt>stack</dt><dd>TypeScript · Next.js · React · Tailwind · SQLite · Vitest · Docker</dd>
+        </dl>
+        <!-- TODO: add <p class="project-links"><a href="https://github.com/GaffGit/...">source</a></p> once the repo is on GitHub -->
+      </article>
+
+      <article class="project">
+        <header class="project-head">
+          <p class="perm" aria-hidden="true">drwxr-xr-x</p>
+          <h3>FoodRadar/</h3>
+          <p class="tag">side project · 2026</p>
+        </header>
+        <dl class="kv">
+          <dt>problem</dt><dd>Checking what's for lunch at the University of Jyväskylä meant opening each student restaurant's menu page one by one.</dd>
+          <dt>role</dt><dd>Solo: designed and built the whole app.</dd>
+          <dt>outcome</dt><dd>A desktop widget that shows every campus restaurant's menu for the day at a glance, pulled from the Semma and Compass Group public menu feeds. <strong>Runs on plain Python with zero dependencies.</strong> Lets you browse by day, switch between Finnish and English, choose which restaurants to show, and start it with Windows.</dd>
+          <dt>stack</dt><dd>Python · Tkinter · Win32 API via ctypes · threading · REST/JSON</dd>
+        </dl>
+        <p class="project-links"><a href="https://github.com/GaffGit/FoodRadar">source</a></p>
+      </article>
+
+
+      <article class="project">
+        <header class="project-head">
+          <p class="perm" aria-hidden="true">drwxr-xr-x</p>
+          <h3>Elokuvalogi/</h3>
+          <p class="tag">course project · Programming 2 · 2025</p>
+        </header>
+        <dl class="kv">
+          <dt>problem</dt><dd>A desktop app for keeping a personal movie log: what you've watched, when, and what you thought of it.</dd>
+          <dt>role</dt><dd>Built with Jonathan Eklund over 64 commits.</dd>
+          <dt>outcome</dt><dd>A JavaFX app for adding, editing, searching and rating movies, with genre, director, year and watch date. <strong>Movies, actors and roles are linked in a relational data model</strong>, and everything is saved between sessions.</dd>
+          <dt>stack</dt><dd>Java · JavaFX · relational data modelling</dd>
+        </dl>
+        <p class="project-links"><a href="https://github.com/GaffGit/Elokuvalogi">source</a></p>
+      </article>
+      <!-- Copy an <article class="project"> block to add a 4th or 5th project. -->
+    </section>
+
+    <!-- ABOUT: short, specific, human -->
+    <section id="about" class="section" data-path="~/about.md">
+      <p class="cmd" data-type>cat about.md</p>
+      <h2># About</h2>
+      <p>I'm a third-year Information and Software Engineering student at the University of Jyväskylä. I like building tools that solve problems I actually have: a lunch-menu widget because checking restaurant pages was tedious, a poker trainer because the good ones are expensive. I enjoy the whole stack, from the logic underneath (a hand evaluator, grading rules, data pipelines) to an interface that's quick to use, and I care about code that's tested and easy to change.</p>
+      <p>Outside code: poker strategy, games, and figuring out how the things I use every day are built.</p>
+    </section>
+
+    <!-- EXPERIENCE: newest first -->
+    <section id="experience" class="section" data-path="~/experience.log">
+      <p class="cmd" data-type>git log --oneline career</p>
+      <h2 class="sr-only">Experience</h2>
+      <ol class="log">
+        <li><span class="hash">HEAD</span> <span class="when">2027</span> <strong>Next: software development / AI internship</strong> — open to summer positions.</li>
+        <li><span class="hash">e4b71c0</span> <span class="when">2026</span> <strong>Software Engineering course</strong> @ University of Jyväskylä — Scrum, automated testing with pytest and coverage, and CI with GitHub Actions.</li>
+        <li><span class="hash">9d2a5f3</span> <span class="when">2026</span> <strong>Full Stack Open</strong> @ University of Helsinki (online course) — React, Node.js, Express and REST APIs.</li>
+        <li><span class="hash">7be3d10</span> <span class="when">2025</span> <strong>Programming 2</strong> @ University of Jyväskylä — built Elokuvalogi, a JavaFX app, as a team of two.</li>
+        <li><span class="hash">0000001</span> <span class="when">2024–now</span> <strong>BSc studies, Information and Software Engineering</strong> @ University of Jyväskylä — 3rd year.</li>
+      </ol>
+    </section>
+
+    <!-- SKILLS: plain text, grouped. No skill bars or percentages. -->
+    <section id="skills" class="section" data-path="~/skills">
+      <p class="cmd" data-type>cat skills.txt</p>
+      <h2 class="sr-only">Skills</h2>
+      <dl class="kv kv-wide">
+        <dt>languages</dt><dd>TypeScript, JavaScript, Python, Java, C++, SQL, HTML/CSS</dd>
+        <dt>frontend</dt><dd>React, Next.js, Tailwind CSS, Vite, responsive and accessible UI</dd>
+        <dt>backend</dt><dd>Node.js, Express, REST APIs, SQLite, relational data modelling, schema validation (Zod)</dd>
+        <dt>desktop</dt><dd>JavaFX, Tkinter, SDL3</dd>
+        <dt>testing</dt><dd>Vitest, pytest, test coverage, linting (pylint, oxlint)</dd>
+        <dt>tools</dt><dd>Git and GitHub, GitHub Actions CI, Docker, uv, CMake, AI-assisted development</dd>
+        <dt>fundamentals</dt><dd>data structures and algorithms, OOP, databases, software design, agile/Scrum</dd>
+      </dl>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" data-path="~/contact">
+      <p class="cmd" data-type>./contact --all</p>
+      <h2>Let's talk.</h2>
+      <p>Email is the fastest way to reach me - I usually respond within one day</p>
+      <ul class="contact-list">
+        <li><span class="k">email</span> <a href="mailto:thomas.rickstrom@live.com">thomas.rickstrom@live.com</a></li>
+        <li><span class="k">github</span> <a href="https://github.com/GaffGit">github.com/GaffGit</a></li>
+        <li><span class="k">linkedin</span> <a href="https://www.linkedin.com/in/thomas-rickström-44719b3b7/">linkedin.com/in/Thomas-Rickström</a></li>
+        <li><span class="k">resume</span> <a href="resume.pdf">resume.pdf</a> <span class="muted">(1 page)</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><a href="https://github.com/GaffGit/portfolio2">view source</a></p>
+  </footer>
+
+  <!-- Command prompt + vim-style status line -->
+  <div class="console">
+    <p class="statusline" aria-hidden="true"><span class="mode">NORMAL</span><span id="sl-file">~</span><span id="sl-pos">Top</span></p>
+    <form class="prompt" id="prompt" autocomplete="off">
+      <label for="cmd-input"><span class="ps1">guest@gaffgit:~$</span><span class="sr-only">Command</span></label>
+      <input id="cmd-input" name="cmd" type="text" spellcheck="false" autocapitalize="off" placeholder="type help" aria-describedby="cmd-out">
+    </form>
+    <p id="cmd-out" class="cmd-out" role="status" aria-live="polite"></p>
+  </div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

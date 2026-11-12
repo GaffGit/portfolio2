@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-gaffgit.vercel.app/sitemap.xml
+
+# Plain-text summary for language models and AI agents:
+# https://portfolio-gaffgit.vercel.app/llms.txt

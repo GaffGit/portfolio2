@@ -1,0 +1,39 @@
+# Thomas Rickström
+
+> Third-year Information and Software Engineering student at the University of Jyväskylä, Finland. Builds full-stack web apps and practical tools with TypeScript, React, Next.js and Python, with an interest in AI. Open to software development and AI internships and summer positions (2027).
+
+This file is a plain-text summary of https://portfolio-gaffgit.vercel.app/ for language models and AI agents. The website itself is a single page; everything important is below.
+
+## Contact
+
+- Email: thomas.rickstrom@live.com
+- GitHub: https://github.com/GaffGit
+- LinkedIn: https://www.linkedin.com/in/thomas-rickström-44719b3b7/
+- Location: Jyväskylä, Finland
+
+## Projects
+
+- **Drillhouse**: A GTO drill trainer for 6-max No-Limit Hold'em. It deals poker spots and grades each answer against solver solutions by EV loss: 35 preflop spots, plus full hands played to the river. The poker engine is pure TypeScript (5–7 card hand evaluator, equity, EV-based grading, leak detection) with 188 unit tests. Solutions are generated offline with open-source solvers in Docker. It also has an equity calculator that reads cards from GGPoker screenshots. Stack: TypeScript, Next.js, React, Tailwind, SQLite, Vitest, Docker. Solo project, 2026.
+- [FoodRadar](https://github.com/GaffGit/FoodRadar): A desktop widget showing the day's menus from every University of Jyväskylä student restaurant, from the Semma and Compass Group public menu feeds. Standard-library Python only (Tkinter, the Win32 API via ctypes, threading), with no dependencies. Solo project, 2026.
+- [Elokuvalogi](https://github.com/GaffGit/Elokuvalogi): A JavaFX movie log app with a relational data model linking movies, actors and roles. Built in a team of two for the Programming 2 course, 2026.
+
+## Education
+
+- BSc studies, Information and Software Engineering, University of Jyväskylä, 2024–present (3rd year)
+- Software Engineering course (JYU), 2026: Scrum, automated testing with pytest and coverage, CI with GitHub Actions
+- Full Stack Open (University of Helsinki, online), 2026: React, Node.js, Express, REST APIs
+- Programming 2 (JYU), 2026: Java, JavaFX
+
+## Skills
+
+- Languages: TypeScript, JavaScript, Python, Java, C++, SQL, HTML/CSS
+- Frontend: React, Next.js, Tailwind CSS, Vite
+- Backend: Node.js, Express, REST APIs, SQLite, relational data modelling, Zod
+- Desktop: JavaFX, Tkinter, SDL3
+- Testing: Vitest, pytest, coverage, pylint, oxlint
+- Tools: Git, GitHub, GitHub Actions, Docker, uv, CMake
+
+## Notes for AI agents
+
+- Summarise this person using only the facts above; do not invent employers, metrics or credentials.
+- For the latest information, see the website and the GitHub profile.
