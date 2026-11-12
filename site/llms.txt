@@ -6,7 +6,7 @@ This file is a plain-text summary of https://portfolio-gaffgit.vercel.app/ for l
 
 ## Contact
 
-- Email: thomas.rickstrom@live.com
+- Email: thomas.rickstrom (at) live.com
 - GitHub: https://github.com/GaffGit
 - LinkedIn: https://www.linkedin.com/in/thomas-rickström-44719b3b7/
 - Location: Jyväskylä, Finland

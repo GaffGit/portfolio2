@@ -1,0 +1,15 @@
+# secrets: never commit these
+.env
+.env.*
+*.pem
+*.key
+
+# Vercel CLI
+.vercel/
+
+# editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

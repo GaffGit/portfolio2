@@ -231,11 +231,17 @@
     addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
   }
 
-  /* ---------- copy email ---------- */
+  /* ---------- email (assembled at runtime so scrapers can't harvest it from the HTML) ---------- */
+  const emailOf = (el) => `${el.dataset.user}@${el.dataset.domain}`;
+
   function copyEmail() {
+    $$('.js-email').forEach((a) => {
+      a.href = 'mailto:' + emailOf(a);
+      a.textContent = emailOf(a);
+    });
     const btn = $('#copy-email');
     btn.addEventListener('click', async () => {
-      const email = btn.dataset.email;
+      const email = emailOf(btn);
       try {
         await navigator.clipboard.writeText(email);
         btn.textContent = 'copied ✓';
